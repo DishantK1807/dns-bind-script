@@ -52,6 +52,6 @@ This repository contains the script for installing a DNS Bind Server on an Ubunt
 ## Running the script
 
 1.  Update the execution permission on the file using the following command.
-    `sudo chmod +x script.sh`
+        `sudo chmod +x script.sh`
 2.  Run the script using the following command
-    `./script.sh`
+        `./script.sh`
