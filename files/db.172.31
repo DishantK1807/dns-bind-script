@@ -1,0 +1,19 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ns1.nyc3.example.com. admin.nyc3.example.com. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+
+; name servers
+        IN      NS      ns1.nyc3.example.com.
+
+; PTR records
+184.15  IN      PTR     ns1.nyc3.example.com.    ;       172.31.15.184
+196.35  IN      PTR     host1.nyc3.example.com.      ;       172.31.35.196
+221.43  IN      PTR     host2.nyc3.example.com.      ;       172.31.43.221

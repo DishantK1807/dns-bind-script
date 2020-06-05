@@ -1,0 +1,22 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+#Forward Zone
+zone "nyc3.example.com" { #Change nyc3.example.com to your subdomain
+        type master;
+        file "/etc/bind/zones/db.nyc3.example.com"; # change the file name wrt to the filename for your subdomain, example: db.subdomain
+        allow-transfer {none;}; 
+};
+
+#Reverse Zone
+zone "45.123.in-addr.arpa"{ # change the 45.123 to the octet revesal of what your IP starts with
+        type master;
+        file "/etc/bind/zones/db.45.123";  # change the filename as well
+        allow-transfer {none;};
+};
+
